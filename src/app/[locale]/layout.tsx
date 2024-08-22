@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
+import { appWithTranslation } from 'next-i18next'
 
 import './globals.css'
 
@@ -47,4 +48,4 @@ function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     )
 }
 
-export default RootLayout
+export default appWithTranslation(RootLayout)

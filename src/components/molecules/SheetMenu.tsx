@@ -1,8 +1,8 @@
-import Link from 'next/link'
+import { Link } from 'next-intl'
 import { MenuIcon, PanelsTopLeft } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-import { Menu } from '@/components/admin-panel/menu'
+import { Menu } from '@/components/molecules/menu'
 import { Sheet, SheetHeader, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 export function SheetMenu() {

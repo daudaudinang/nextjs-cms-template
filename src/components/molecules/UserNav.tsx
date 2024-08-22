@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from 'next-intl'
 import { useRouter } from 'next/navigation'
 import { LayoutGrid, LogOut, User } from 'lucide-react'
 import { logout } from '@/actions/auth'
