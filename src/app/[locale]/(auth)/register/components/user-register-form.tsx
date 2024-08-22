@@ -7,10 +7,14 @@ import { Icons } from '@/components/icons'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { useTranslations } from 'next-intl'
 
 type UserAuthFormProps = React.HTMLAttributes<HTMLDivElement>
 
 export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
+    const tRegister = useTranslations('page.register')
+    const tCommon = useTranslations('common')
+    
     const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
     async function onSubmit(event: React.SyntheticEvent) {
@@ -28,7 +32,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
                 <div className="grid gap-2">
                     <div className="grid gap-1">
                         <Label className="sr-only" htmlFor="email">
-                            Email
+                            {tRegister('email')}
                         </Label>
                         <Input
                             id="email"
@@ -42,7 +46,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
                     </div>
                     <Button disabled={isLoading}>
                         {isLoading && <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />}
-                        Sign Up with Email
+                        {tRegister('confirm-btn')}
                     </Button>
                 </div>
             </form>
@@ -52,7 +56,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
                     <span className="bg-background px-2 text-muted-foreground">
-                        Or continue with
+                        {tCommon('or')}
                     </span>
                 </div>
             </div>

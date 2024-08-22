@@ -25,7 +25,7 @@ type TranslationFunction = (key: string, values?: Record<string, any>) => string
 
 export function getMenuList(pathname: string): Group[] {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const t = useTranslations(['menu']) as TranslationFunction
+    const t = useTranslations('menu') as TranslationFunction
 
     const pathnameWithoutLocale = pathname.replace(
         new RegExp(`^/(${i18nConfig.locales.join('|')})`),

@@ -1,4 +1,7 @@
 {
+    "demo": {
+        "title": "NextJS CMS Demo Interface"
+    },
     "common": {
         "active": "Active",
         "inactive": "Inactive",
@@ -10,6 +13,8 @@
         "search-placeholder": "Search...",
         "no-data": "No data",
         "no-result": "No results found",
+        "or": "Or",
+        "more": "View more",
         "yes": "Yes",
         "no": "No",
         "cancel": "Cancel",
@@ -40,6 +45,7 @@
         "confirm-disapprove": "Are you sure you want to disapprove?"
     },
     "function": {
+        "logout": "Logout",
         "switch-theme": "Switch theme",
         "switch-language": "Switch language",
         "profile": "Profile"
@@ -67,17 +73,18 @@
             "title": "Login",
             "email": "Email",
             "password": "Password",
+            "description": "Enter your email and password to log in",
             "confirm-password": "Confirm password",
             "remember-me": "Remember me",
             "forgot-password": "Forgot password",
             "confirm-btn": "Login"
         },
         "register": {
-            "title": "Register",
+            "title": "Register account",
             "email": "Email",
-            "or": "Or",
+            "description": "Enter your email to register an account",
             "confirm-btn": "Register with email",
-            "agreement": "By clicking continue, you agree to our {terms} and {privacy}."
+            "agreement": "By clicking continue, you agree to our <terms>Terms of Service</terms> and <privacy>Privacy Policy</privacy>."
         },
         "dashboard": {
             "title": "Dashboard"

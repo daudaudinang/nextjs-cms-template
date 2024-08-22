@@ -1,4 +1,7 @@
 {
+    "demo": {
+        "title": "Giao diện mẫu CMS NextJS"
+    },
     "common": {
         "active": "Hoạt động",
         "inactive": "Không hoạt động",
@@ -10,6 +13,8 @@
         "search-placeholder": "Tìm kiếm...",
         "no-data": "Không có dữ liệu",
         "no-result": "Không tìm thấy kết quả",
+        "or": "Hoặc",
+        "more": "Xem thêm",
         "yes": "Có",
         "no": "Không",
         "cancel": "Hủy",
@@ -75,11 +80,11 @@
             "confirm-btn": "Đăng nhập"
         },
         "register": {
-            "title": "Đăng ký",
+            "title": "Đăng ký tài khoản",
             "email": "Email",
-            "or": "Hoặc",
+            "description": "Nhập email của bạn để đăng ký tài khoản",
             "confirm-btn": "Đăng ký với email",
-            "agreement": "Bằng cách nhấp vào tiếp tục, bạn đồng ý với {terms} và {privacy} của chúng tôi."
+            "agreement": "Bằng cách nhấp vào tiếp tục, bạn đồng ý với <terms>Điều khoản sử dụng</terms> và <privacy>Chính sách bảo mật</privacy> của chúng tôi."
         },
         "dashboard": {
             "title": "Bảng điều khiển"

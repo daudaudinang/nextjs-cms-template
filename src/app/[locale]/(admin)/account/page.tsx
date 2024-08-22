@@ -1,15 +1,18 @@
 import PlaceholderContent from '@/components/demo/placeholder-content'
 import { ContentLayout } from '@/components/molecules/ContentLayout'
 import Breadcrumb from '@/components/atoms/Breadcrumb'
+import { useTranslations } from 'next-intl'
 
 export default function AccountPage() {
+    const tMenu = useTranslations('menu')
+
     const breadcrumbItems = [
-        { href: '/', label: 'Home' },
-        { label: 'Account', isCurrentPage: true },
+        { href: '/', label: tMenu('home') },
+        { label: tMenu('account'), isCurrentPage: true },
     ]
 
     return (
-        <ContentLayout title="Account">
+        <ContentLayout title={tMenu('account')}>
             <Breadcrumb items={breadcrumbItems} />
             <PlaceholderContent />
         </ContentLayout>

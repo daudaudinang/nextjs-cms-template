@@ -1,13 +1,13 @@
+import { Link } from '@/components/atoms/Link'
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { Link } from '@/components/atoms/Link'
 
-import { cn } from '@/utils/cn-merge'
-import { buttonVariants } from '@/components/ui/button'
-import { UserLoginForm } from './components/user-login-form'
 import { LanguageSwitcher } from '@/components/atoms/LanguageSwitcher'
 import { ModeToggle } from '@/components/atoms/ModeToggle'
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/utils/cn-merge'
 import { useTranslations } from 'next-intl'
+import { UserLoginForm } from './components/user-login-form'
 
 export const metadata: Metadata = {
     title: 'Authentication',

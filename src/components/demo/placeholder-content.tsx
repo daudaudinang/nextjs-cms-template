@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import { Card, CardContent } from '@/components/ui/card'
 
 export default function PlaceholderContent() {
-    const t = useTranslations(['common'])
+    const tDemo = useTranslations('demo')
 
     return (
         <Card className="rounded-lg border-none mt-6">
@@ -25,7 +25,7 @@ export default function PlaceholderContent() {
                                 rel="noopener noreferrer"
                                 className="text-xs text-muted-foreground"
                             >
-                                {t('title')}
+                                {tDemo('title')}
                             </Link>
                         </div>
                     </div>

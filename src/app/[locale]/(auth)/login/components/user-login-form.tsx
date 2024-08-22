@@ -10,6 +10,7 @@ import { PasswordInput } from '@/components/ui/password-input'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { ILoginForm, login } from '@/actions/auth'
+import { useTranslations } from 'next-intl'
 
 type UserAuthFormProps = React.HTMLAttributes<HTMLDivElement>
 
@@ -21,7 +22,10 @@ type EventSubmit = {
     }
 }
 
-export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
+export function UserLoginForm({ className, ...props }: Readonly<UserAuthFormProps>) {
+    const tLogin = useTranslations('page.login')
+    const tCommon = useTranslations('common')
+
     const router = useRouter()
     const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
@@ -52,7 +56,7 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
                 <div className="grid gap-2">
                     <div className="grid gap-1">
                         <Label className="sr-only" htmlFor="email">
-                            Email
+                            {tLogin('email')}
                         </Label>
                         <Input
                             id="email"
@@ -66,11 +70,11 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
                     </div>
                     <div className="grid gap-1">
                         <Label className="sr-only" htmlFor="email">
-                            Password
+                            {tLogin('password')}
                         </Label>
                         <PasswordInput
                             id="password"
-                            placeholder="name@example.com"
+                            placeholder="password"
                             autoCapitalize="none"
                             autoComplete="email"
                             autoCorrect="off"
@@ -79,7 +83,7 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
                     </div>
                     <Button disabled={isLoading}>
                         {isLoading && <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />}
-                        Sign in
+                        {tLogin('confirm-btn')}
                     </Button>
                 </div>
             </form>
@@ -89,7 +93,7 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
                     <span className="bg-background px-2 text-muted-foreground">
-                        Or continue with
+                        {tCommon('or')}
                     </span>
                 </div>
             </div>

@@ -7,6 +7,8 @@ interface CustomLinkProps extends Omit<LinkProps, 'href'> {
     href: string
     children?: React.ReactNode | React.ReactNode[]
     className?: string
+    target?: string
+    rel?: string
 }
 
 const CustomLink = forwardRef<HTMLAnchorElement, CustomLinkProps>(
