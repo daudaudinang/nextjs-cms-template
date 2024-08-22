@@ -1,9 +1,9 @@
 'use client'
 
-import { cn } from '@/lib/utils'
+import { cn } from '@/utils/cn-merge'
 import { useStore } from '@/hooks/use-store'
-import { Footer } from '@/components/molecules/footer'
-import { Sidebar } from '@/components/molecules/sidebar'
+import { Footer } from '@/components/molecules/Footer'
+import { Sidebar } from '@/components/molecules/Sidebar'
 import { useSidebarToggle } from '@/hooks/use-sidebar-toggle'
 
 export default function AdminPanelLayout({ children }: { children: React.ReactNode }) {

@@ -1,0 +1,110 @@
+{
+    "common": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "status": "Status",
+        "created-at": "Created at",
+        "updated-at": "Updated at",
+        "actions": "Actions",
+        "search": "Search",
+        "search-placeholder": "Search...",
+        "no-data": "No data",
+        "no-result": "No results found",
+        "yes": "Yes",
+        "no": "No",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "delete": "Delete",
+        "edit": "Edit",
+        "view": "View",
+        "save": "Save",
+        "close": "Close",
+        "back": "Back",
+        "next": "Next",
+        "previous": "Previous",
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success",
+        "warning": "Warning",
+        "info": "Information",
+        "confirm-delete": "Are you sure you want to delete?",
+        "confirm-logout": "Are you sure you want to log out?",
+        "confirm-action": "Are you sure you want to perform this action?",
+        "confirm-change": "Are you sure you want to make changes?",
+        "confirm-active": "Are you sure you want to activate?",
+        "confirm-inactive": "Are you sure you want to deactivate?",
+        "confirm-accept": "Are you sure you want to accept?",
+        "confirm-reject": "Are you sure you want to reject?",
+        "confirm-restore": "Are you sure you want to restore?",
+        "confirm-approve": "Are you sure you want to approve?",
+        "confirm-disapprove": "Are you sure you want to disapprove?"
+    },
+    "function": {
+        "switch-theme": "Switch theme",
+        "switch-language": "Switch language",
+        "profile": "Profile"
+    },
+    "menu": {
+        "home": "Home",
+        "dashboard": "Dashboard",
+        "about": "About us",
+        "contact": "Contact",
+        "categories": "Categories",
+        "tags": "Tags",
+        "users": "Users",
+        "account": "Account",
+        "posts": "Posts",
+        "posts-list": "Posts list",
+        "posts-new": "Create post",
+        "not-found": "Not found",
+        "contents": "Contents",
+        "settings": "Settings"
+    },
+    "page": {
+        "term-of-services": "Terms of Service",
+        "privacy-policy": "Privacy Policy",
+        "login": {
+            "title": "Login",
+            "email": "Email",
+            "password": "Password",
+            "confirm-password": "Confirm password",
+            "remember-me": "Remember me",
+            "forgot-password": "Forgot password",
+            "confirm-btn": "Login"
+        },
+        "register": {
+            "title": "Register",
+            "email": "Email",
+            "or": "Or",
+            "confirm-btn": "Register with email",
+            "agreement": "By clicking continue, you agree to our {terms} and {privacy}."
+        },
+        "dashboard": {
+            "title": "Dashboard"
+        },
+        "posts": {
+            "title": "Posts"
+        },
+        "posts-list": {
+            "title": "Posts list"
+        },
+        "posts-new": {
+            "title": "Create post"
+        },
+        "users": {
+            "title": "Users"
+        },
+        "categories": {
+            "title": "Categories"
+        },
+        "tags": {
+            "title": "Tags"
+        },
+        "settings": {
+            "title": "Settings"
+        },
+        "account": {
+            "title": "Account"
+        }
+    }
+}

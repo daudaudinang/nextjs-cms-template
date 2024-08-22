@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import { Tag, Users, Settings, Bookmark, SquarePen, LayoutGrid, LucideIcon } from 'lucide-react'
 import i18nConfig from '../../configs/i18n-config'
 
@@ -20,19 +21,24 @@ type Group = {
     menus: Menu[]
 }
 
+type TranslationFunction = (key: string, values?: Record<string, any>) => string
+
 export function getMenuList(pathname: string): Group[] {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const t = useTranslations(['menu']) as TranslationFunction
+
     const pathnameWithoutLocale = pathname.replace(
         new RegExp(`^/(${i18nConfig.locales.join('|')})`),
         ''
     )
-    
+
     return [
         {
             groupLabel: '',
             menus: [
                 {
                     href: '/dashboard',
-                    label: 'Dashboard',
+                    label: t('dashboard'),
                     active: pathnameWithoutLocale.startsWith('/dashboard'),
                     icon: LayoutGrid,
                     submenus: [],
@@ -40,36 +46,36 @@ export function getMenuList(pathname: string): Group[] {
             ],
         },
         {
-            groupLabel: 'Contents',
+            groupLabel: t('contents'),
             menus: [
                 {
                     href: '',
-                    label: 'Posts',
+                    label: t('posts'),
                     active: pathnameWithoutLocale.startsWith('/posts'),
                     icon: SquarePen,
                     submenus: [
                         {
                             href: '/posts',
-                            label: 'All Posts',
+                            label: t('posts-list'),
                             active: pathnameWithoutLocale === '/posts',
                         },
                         {
                             href: '/posts/new',
-                            label: 'New Post',
+                            label: t('posts-new'),
                             active: pathnameWithoutLocale === '/posts/new',
                         },
                     ],
                 },
                 {
                     href: '/categories',
-                    label: 'Categories',
+                    label: t('categories'),
                     active: pathnameWithoutLocale.startsWith('/categories'),
                     icon: Bookmark,
                     submenus: [],
                 },
                 {
                     href: '/tags',
-                    label: 'Tags',
+                    label: t('tags'),
                     active: pathnameWithoutLocale.startsWith('/tags'),
                     icon: Tag,
                     submenus: [],
@@ -77,18 +83,18 @@ export function getMenuList(pathname: string): Group[] {
             ],
         },
         {
-            groupLabel: 'Settings',
+            groupLabel: t('settings'),
             menus: [
                 {
                     href: '/users',
-                    label: 'Users',
+                    label: t('users'),
                     active: pathnameWithoutLocale.startsWith('/users'),
                     icon: Users,
                     submenus: [],
                 },
                 {
                     href: '/account',
-                    label: 'Account',
+                    label: t('account'),
                     active: pathnameWithoutLocale.startsWith('/account'),
                     icon: Settings,
                     submenus: [],

@@ -3,6 +3,7 @@
     "plugins": ["@typescript-eslint", "prettier"],
     "rules": {
         "prettier/prettier": "warn",
+        "react-hooks/rules-of-hooks": ["error", { "allow": ["useTranslations"] }],
         "@typescript-eslint/no-unused-vars": "warn",
         "@typescript-eslint/no-explicit-any": "off"
     },

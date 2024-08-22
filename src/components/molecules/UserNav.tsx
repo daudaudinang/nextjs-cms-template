@@ -1,6 +1,6 @@
 'use client'
 
-import { Link } from 'next-intl'
+import { Link } from '@/components/atoms/Link'
 import { useRouter } from 'next/navigation'
 import { LayoutGrid, LogOut, User } from 'lucide-react'
 import { logout } from '@/actions/auth'

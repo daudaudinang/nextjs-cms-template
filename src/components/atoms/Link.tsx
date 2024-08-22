@@ -1,21 +1,35 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import Link, { LinkProps } from 'next/link'
 import { useLocale } from 'next-intl'
+import i18nConfig from '#/configs/i18n-config'
 
-interface LinkProps extends Omit<LinkProps, 'href'> {
+interface CustomLinkProps extends Omit<LinkProps, 'href'> {
     href: string
+    children?: React.ReactNode | React.ReactNode[]
+    className?: string
 }
 
-const CustomLink: React.FC<LinkProps> = ({ href, ...props }) => {
-    const locale = useLocale()
+const CustomLink = forwardRef<HTMLAnchorElement, CustomLinkProps>(
+    ({ children, href, ...props }, ref) => {
+        const locale = useLocale()
 
-    // Kiểm tra xem href có bắt đầu bằng '/' hay không
-    const isInternalLink = href.startsWith('/')
+        // Kiểm tra xem href có bắt đầu bằng '/' hay không
+        const isInternalLink = href.startsWith('/')
 
-    // Nếu là internal link, thêm locale vào đầu
-    const modifiedHref = isInternalLink ? `/${locale}${href}` : href
+        const modifiedHref = (() => {
+            if (isInternalLink && !href.match(new RegExp(`^/(${i18nConfig.locales.join('|')})`))) {
+                return `/${locale}${href}`
+            } else return href
+        })()
 
-    return <Link href={modifiedHref} {...props} />
-}
+        return (
+            <Link href={modifiedHref} {...props} ref={ref}>
+                {children}
+            </Link>
+        )
+    }
+)
 
-export default CustomLink
+CustomLink.displayName = 'CustomLink'
+
+export { CustomLink as Link }

@@ -1,0 +1,112 @@
+{
+    "common": {
+        "active": "Hoạt động",
+        "inactive": "Không hoạt động",
+        "status": "Trạng thái",
+        "created-at": "Ngày tạo",
+        "updated-at": "Ngày cập nhật",
+        "actions": "Hành động",
+        "search": "Tìm kiếm",
+        "search-placeholder": "Tìm kiếm...",
+        "no-data": "Không có dữ liệu",
+        "no-result": "Không tìm thấy kết quả",
+        "yes": "Có",
+        "no": "Không",
+        "cancel": "Hủy",
+        "confirm": "Xác nhận",
+        "delete": "Xóa",
+        "edit": "Sửa",
+        "view": "Xem",
+        "save": "Lưu",
+        "close": "Đóng",
+        "back": "Quay lại",
+        "next": "Tiếp theo",
+        "previous": "Trước",
+        "loading": "Đang tải...",
+        "error": "Lỗi",
+        "success": "Thành công",
+        "warning": "Cảnh báo",
+        "info": "Thông tin",
+        "confirm-delete": "Bạn có chắc chắn muốn xóa không?",
+        "confirm-logout": "Bạn có chắc chắn muốn đăng xuất không?",
+        "confirm-action": "Bạn có chắc chắn muốn thực hiện hành động này không?",
+        "confirm-change": "Bạn có chắc chắn muốn thay đổi không?",
+        "confirm-active": "Bạn có chắc chắn muốn kích hoạt không?",
+        "confirm-inactive": "Bạn có chắc chắn muốn hủy kích hoạt không?",
+        "confirm-accept": "Bạn có chắc chắn muốn chấp nhận không?",
+        "confirm-reject": "Bạn có chắc chắn muốn từ chối không?",
+        "confirm-restore": "Bạn có chắc chắn muốn khôi phục không?",
+        "confirm-approve": "Bạn có chắc chắn muốn duyệt không?",
+        "confirm-disapprove": "Bạn có chắc chắn muốn không duyệt không?"
+    },
+    "function": {
+        "logout": "Đăng xuất",
+        "switch-theme": "Đổi chủ đề",
+        "switch-language": "Đổi ngôn ngữ",
+        "profile": "Hồ sơ"
+    },
+    "menu": {
+        "home": "Trang chủ",
+        "dashboard": "Bảng điều khiển",
+        "about": "Về chúng tôi",
+        "contact": "Liên hệ",
+        "categories": "Danh mục",
+        "tags": "Thẻ",
+        "users": "Người dùng",
+        "account": "Tài khoản",
+        "posts": "Bài viết",
+        "posts-list": "Danh sách bài viết",
+        "posts-new": "Tạo bài viết",
+        "not-found": "Không tìm thấy",
+        "contents": "Nội dung",
+        "settings": "Cài đặt"
+    },
+    "page": {
+        "term-of-services": "Điều khoản dịch vụ",
+        "privacy-policy": "Chính sách bảo mật",
+        "login": {
+            "title": "Đăng nhập",
+            "email": "Email",
+            "password": "Mật khẩu",
+            "description": "Nhập email và mật khẩu của bạn để đăng nhập",
+            "confirm-password": "Xác nhận mật khẩu",
+            "remember-me": "Nhớ tôi",
+            "forgot-password": "Quên mật khẩu",
+            "confirm-btn": "Đăng nhập"
+        },
+        "register": {
+            "title": "Đăng ký",
+            "email": "Email",
+            "or": "Hoặc",
+            "confirm-btn": "Đăng ký với email",
+            "agreement": "Bằng cách nhấp vào tiếp tục, bạn đồng ý với {terms} và {privacy} của chúng tôi."
+        },
+        "dashboard": {
+            "title": "Bảng điều khiển"
+        },
+        "posts": {
+            "title": "Bài viết"
+        },
+        "posts-list": {
+            "title": "Danh sách bài viết"
+        },
+        "posts-new": {
+            "title": "Tạo bài viết"
+        },
+        "users": {
+            "title": "Người dùng"
+        },
+        "categories": {
+            "title": "Danh mục"
+        },
+        "tags": {
+            "title": "Thẻ"
+        },
+        "settings": {
+            "title": "Cài đặt"
+        },
+        "account": {
+            "title": "Tài khoản"
+        }
+    }
+}

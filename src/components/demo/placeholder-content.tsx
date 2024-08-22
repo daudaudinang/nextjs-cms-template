@@ -1,9 +1,11 @@
-import Link from 'next/link'
+import { Link } from '@/components/atoms/Link'
 import Image from 'next/image'
-
+import { useTranslations } from 'next-intl'
 import { Card, CardContent } from '@/components/ui/card'
 
 export default function PlaceholderContent() {
+    const t = useTranslations(['common'])
+
     return (
         <Card className="rounded-lg border-none mt-6">
             <CardContent className="p-6">
@@ -23,7 +25,7 @@ export default function PlaceholderContent() {
                                 rel="noopener noreferrer"
                                 className="text-xs text-muted-foreground"
                             >
-                                Designed by Freepik
+                                {t('title')}
                             </Link>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import { Navbar } from '@/components/molecules/navbar'
+import { Navbar } from '@/components/molecules/Navbar'
 import React from 'react'
 
 interface ContentLayoutProps {

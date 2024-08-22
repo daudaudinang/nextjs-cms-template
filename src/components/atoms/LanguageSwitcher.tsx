@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -6,29 +7,30 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
-import { useMemo } from 'react'
-import Link from 'next-intl/link'
+import { useCallback, useMemo } from 'react'
+import { usePathname } from 'next/navigation'
+import i18nConfig from '#/configs/i18n-config'
 
 export function LanguageSwitcher() {
-    const LanguageItem = useMemo(
+    const pathname = usePathname()
+
+    const generateLink = useCallback(
+        (locale: string) => {
+            return pathname.replace(`/${pathname.split('/')[1]}`, `/${locale}`)
+        },
+        [pathname]
+    )
+
+    const languageItems = useMemo(
         () =>
-            [
-                {
-                    key: 'en',
-                    value: 'English',
-                },
-                {
-                    key: 'vi',
-                    value: 'Tiếng Việt',
-                },
-            ].map(({ key, value }) => (
-                <DropdownMenuItem key={key}>
-                    <Link href="/" locale={key}>
-                        {value}
+            i18nConfig.languages.map(({ locale, name }) => (
+                <DropdownMenuItem key={locale} asChild>
+                    <Link href={generateLink(locale)} locale={locale}>
+                        {name}
                     </Link>
                 </DropdownMenuItem>
             )),
-        []
+        [generateLink]
     )
 
     return (
@@ -43,7 +45,7 @@ export function LanguageSwitcher() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="center" side="bottom" className="w-36">
-                {LanguageItem}
+                {languageItems}
             </DropdownMenuContent>
         </DropdownMenu>
     )

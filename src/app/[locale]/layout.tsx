@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
-import { appWithTranslation } from 'next-i18next'
-
 import './globals.css'
-
 import { ThemeProvider } from '@/providers/theme-provider'
+import { NextIntlClientProvider } from 'next-intl'
 import React from 'react'
+import { getMessages } from 'next-intl/server'
+import { TopLoader } from '@/components/atoms/TopLoader'
 
 export const metadata: Metadata = {
     metadataBase: new URL(
@@ -36,16 +36,24 @@ export const metadata: Metadata = {
     },
 }
 
-function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+async function RootLayout({
+    children,
+    params: { locale },
+}: Readonly<{ children: React.ReactNode; params: { locale: string } }>) {
+    const messages = await getMessages()
+
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang={locale} suppressHydrationWarning>
             <body className={GeistSans.className}>
-                <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-                    {children}
-                </ThemeProvider>
+                <NextIntlClientProvider locale={locale} messages={messages}>
+                    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+                        <TopLoader />
+                        {children}
+                    </ThemeProvider>
+                </NextIntlClientProvider>
             </body>
         </html>
     )
 }
 
-export default appWithTranslation(RootLayout)
+export default RootLayout

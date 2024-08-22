@@ -30,7 +30,7 @@ const CustomBreadcrumb: React.FC<CustomBreadcrumbProps> = ({ items }) => {
                                 <BreadcrumbPage>{item.label}</BreadcrumbPage>
                             ) : (
                                 <BreadcrumbLink asChild>
-                                    <Link href={item.href || '#'}>{item.label}</Link>
+                                    <Link href={item.href ?? '#'}>{item.label}</Link>
                                 </BreadcrumbLink>
                             )}
                         </BreadcrumbItem>

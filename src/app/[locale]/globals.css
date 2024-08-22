@@ -75,3 +75,9 @@
         @apply bg-background text-foreground;
     }
 }
+
+/* Tắt scroll locked của radix-ui, sửa lỗi màn hình bị co vào với thiết bị mobile */
+html body[data-scroll-locked] {
+    --removed-body-scroll-bar-size: 0 !important;
+    margin-right: 0 !important;
+}
