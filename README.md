@@ -33,49 +33,49 @@ Hướng dẫn sử dụng demo:
 1. Install dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 2. Chạy server dev
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 3. Build product
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 4. Chạy server product
 
 ```bash
-npm run start
+pnpm run start
 ```
 
 5. Sửa các lỗi format code và sửa tự động
 
 ```bash
-npm run format
+pnpm run format
 ```
 
 6. Kiểm tra lỗi format code
 
 ```bash
-npm run format:check
+pnpm run format:check
 ```
 
 7. Kiểm tra lỗi code
 
 ```bash
-npm run lint
+pnpm run lint
 ```
 
 8. Kiểm tra lỗi code và sửa tự động
 
 ```bash
-npm run lint:fix
+pnpm run lint:fix
 ```
 
 ## Cấu trúc thư mục của ứng dụng
