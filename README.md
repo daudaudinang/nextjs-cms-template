@@ -112,7 +112,7 @@ pnpm run lint:fix
 - useSWR: Fetch data cho "client component"
 - next-intl: Thay đổi ngôn ngữ
 
-## Công cụ bảo chất lượng code và commit
+## Công cụ bảo đảm chất lượng code và commit
 
 1. **ESLint**: Kiểm tra lỗi và enforce coding style.
 2. **Prettier**: Tự động format code.
