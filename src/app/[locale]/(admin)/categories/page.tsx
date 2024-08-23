@@ -7,7 +7,7 @@ export default function CategoriesPage() {
     const tMenu = useTranslations('menu')
 
     const breadcrumbItems = [
-        { href: '/', label: tMenu('menu') },
+        { href: '/', label: tMenu('home') },
         { label: tMenu('categories'), isCurrentPage: true },
     ]
 

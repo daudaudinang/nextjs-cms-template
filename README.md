@@ -278,8 +278,7 @@ Mô tả: Sử dụng cho việc tái cấu trúc code mà không thêm tính n�
 
 Việc tuân thủ quy ước đặt tên branch này sẽ giúp team dễ dàng theo dõi và quản lý các thay đổi trong dự án, đồng thời tăng cường khả năng hợp tác và hiệu quả làm việc
 
-## Quy ước Commit
-
+## Quy ước chuẩn hóa Commit Message
 Chúng ta sử dụng Conventional Commits để chuẩn hóa commit messages:
 <type\> [optional scope]: <description\> [optional body] \[optional footer(s)]
 

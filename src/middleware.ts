@@ -16,6 +16,15 @@ const intlMiddleware = createMiddleware({
 
 export function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl
+    
+    // Kiểm tra nếu là file tĩnh, bỏ qua xử lý middleware
+    if (
+        pathname.includes('.') || // Có phần mở rộng file
+        pathname.startsWith('/_next') || // Các tài nguyên Next.js
+        pathname.startsWith('/api') // API routes
+    ) {
+        return NextResponse.next()
+    }
 
     const currentUser = request.cookies.get('currentUser')?.value
 
