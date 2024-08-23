@@ -6,6 +6,28 @@
 - Xử lý redirect login/logout và routing hoàn chỉnh
 - Xử lý hiển thị loading page bằng TopProgressBar
 
+## Mục lục
+- [Demo](#demo)
+- [Cài đặt và sử dụng](#cài-đặt-và-sử-dụng)
+- [Cấu trúc thư mục của ứng dụng](#cấu-trúc-thư-mục-của-ứng-dụng)
+- [Tech/framework sử dụng](#techframework-sử-dụng)
+- [Công cụ bảo chất lượng code và commit](#công-cụ-bảo-chất-lượng-code-và-commit)
+- [Quy ước Code](#quy-ước-code)
+  - [JavaScript/TypeScript](#javascripttypescript)
+  - [NextJS](#nextjs)
+- [Quy ước sử dụng i18n (next-intl)](#quy-ước-sử-dụng-i18n-next-intl)
+- [Quy ước đặt tên branch](#quy-ước-đặt-tên-branch)
+- [Quy ước Commit](#quy-ước-commit)
+- [Quy trình Commit](#quy-trình-commit)
+- [Lưu ý](#lưu-ý)
+- [Quy trình làm việc](#quy-trình-làm-việc)
+- [Screenshots](#screenshots)
+
+## Demo
+Truy cập: [https://nextjs-cms-template.vercel.app](https://nextjs-cms-template.vercel.app/en/login?from=/)
+Hướng dẫn sử dụng demo:
+* Login: email và password bất kỳ, chỉ cần nhập lần đầu khi vào trang, sau đó currentUser fake sẽ được lưu vào cookies, những lần truy cập sau không cần login lại
+
 ## Cài đặt và sử dụng
 
 1. Install dependencies
@@ -74,8 +96,8 @@ npm run lint:fix
 |─── .prettierrc.js: Cấu hình Prettier - Các rule để format code
 |─── commitlint.config.js: Cấu hình commitlint - Các rule để kiểm tra commit message
 |─── .husky: Cấu hình git hooks - Tự động format và kiểm tra lint code trước khi commit
-|─── components.json: Cấu hình shadcn/ui
-|─── i18n.ts: Cấu hình i18n
+|─── components.json: Cài đặt shadcn/ui
+|─── i18n.ts: Cài đặt i18n
 |─── .env.local: File .env chính
 ```
 
@@ -85,7 +107,7 @@ npm run lint:fix
 - Shadcn/ui
 - Tailwind CSS
 - TypeScript
-- Zustand: Thư viện quản lý state
+- Zustand: Thư viện quản lý state (Dùng cho client component)
 - lucide-react: Icon
 - useSWR: Fetch data cho "client component"
 - next-intl: Thay đổi ngôn ngữ
@@ -209,7 +231,6 @@ Sử dụng cấu trúc phân cấp để tổ chức các key. Các nhóm chín
 
 ## Quy ước đặt tên branch
 Chúng ta sử dụng quy ước đặt tên branch sau để dễ dàng theo dõi mục đích và nội dung của mỗi branch:
-### Phân loại
 1. Feature branches:
 Mẫu: feature/<tên-tính-năng>
 Ví dụ: feature/user-authentication, feature/product-search
@@ -246,7 +267,7 @@ Mô tả: Sử dụng cho việc tái cấu trúc code mà không thêm tính n�
 * Tránh sử dụng tên quá chung chung như "fix" hoặc "update".
 * Nếu có issue tracker, có thể thêm số issue vào tên branch, ví dụ: feature/user-auth-#123.
 
-### Quy trình làm việc với branches:
+### Quy trình làm việc với branches
 * Tạo branch mới từ main (hoặc develop nếu sử dụng Git Flow).
 * Đặt tên branch theo quy ước trên.
 * Thực hiện các thay đổi và commit theo quy ước commit đã đề cập trước đó.
@@ -260,7 +281,7 @@ Việc tuân thủ quy ước đặt tên branch này sẽ giúp team dễ dàng
 ## Quy ước Commit
 
 Chúng ta sử dụng Conventional Commits để chuẩn hóa commit messages:
-<type\> [optional scope]: <description\> [optional body] \[optional footer(s)\]
+<type\> [optional scope]: <description\> [optional body] \[optional footer(s)]
 
 ### Các loại commit (type) chính:
 
